@@ -53,3 +53,76 @@ footer {
     align-items: center;
   }
 }
+
+.gameplay_img{
+  margin:0 auto;
+  max-width: 400px;
+}
+
+.screen_header{
+  padding: 10px;
+  font-weight: bolder;
+  display:block;
+  text-align: center;
+}
+
+.gallery {
+  flex-flow: row wrap;
+  justify-content: space-evenly; align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.item-wrap{
+  padding: 10px;
+}
+.gallery img {
+  height: auto; width: 100%;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 6px #919191;
+  transition: .5s linear; cursor: pointer;
+}
+.show img { opacity: .25; pointer-events: none; }
+
+.active {
+  position: relative;
+  background-size: contain;
+  /*transition: box-shadow .5s linear .5s, top 1s ease-out, left 1s ease-out, transform 1s ease-out, width 1s ease-in, height 1s ease-in;*/
+  box-shadow: 0 0 0 10px #fff;
+  filter: drop-shadow(1px 2px 6px #000);
+  width: 70%; /* ширина блока */
+  aspect-ratio: 16/9;
+
+}
+.close {
+  position: absolute;
+  right: -20px;
+  top:-20px;
+  height: 20px;
+  width: 20px;
+  /*transform: translate(0%, -100%);*/
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 2px 2px #000;
+  font: bold 20px/20px Arial; text-align: center;
+  background-color: #000; color: #fff;
+  cursor: pointer;
+  /*transition: 1s linear; opacity: 0;*/
+}
+
+.overlay {
+  display:flex;
+  position: fixed; /* фиксированная позиция */
+  top: 0; /* расположение сверху */
+  left: 0; /* расположение слева */
+  width: 100%; /* ширина блока */
+  height: 100%; /* высота блока */
+  z-index: 9999; /* порядок слоёв, чтобы блок был поверх остального содержимого */
+  background-color: rgba(0, 0, 0, 0.5); /* цвет фона с прозрачностью */
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay.hover {
+  background-color: rgba(0, 0, 0, 0.25); /* цвет фона с прозрачностью */
+}
+
+/*.active .close:hover { transform: translate(0%, -100%) rotate(.5turn); transition: 1s ease; }*/
