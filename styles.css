@@ -1,0 +1,55 @@
+/* Reset default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header, nav, section, footer {
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+section {
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
